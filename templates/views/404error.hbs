@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>links}}
+</head>
+<body>
+
+{{>navbar}}
+
+    <!-- Main Header -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                     <!-- left side div -->
+                     <div class="col-md-6 col-12 main_header_left align-items-center">
+                        <figure>
+                            <img src="images/error.png" alt="my photo" class="img-fluid" id="errorimg" title="Dnyanesh Chavan">
+                        </figure>
+                     
+                     </div>
+                     <div class="col-md-6 col-12 main_header_left align-items-center">
+                      <p>Welcome To Dnyaneshc Tech World.</p>
+                        <h1>{{errorMsg}}</h1>
+                        <a href="/"><button>Go Back To Home</button></a>
+                    </div>                   
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+  
+
+        <!-- footer code -->
+        {{>footer}}
+</body>
+</html>

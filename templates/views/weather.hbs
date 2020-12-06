@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>links}}
+</head>
+<body>
+    {{>navbar}}
+    
+
+ <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter Your City Name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+
+                <div class="tempInformation">
+                    <div class="top_layer">
+                        <p id="day">Saturday</p>
+                        <p id="today_date">13 OCT</p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get Output Here</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"><span id="temp_real_val">0</span> <sup>o</sup>C</p>
+                            <p id="temp_status"> <i class="fa fa-cloud" aria-hidden="true"></i></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+{{>footer}}
+
+<script src="js/main.js"></script>
+
+<script>
+
+    const today_date = document.getElementById('today_date');
+    const day = document.getElementById('day');
+    const getCurrentDay = () =>{
+                var weekday = new Array(7);
+                weekday[0] = "Sunday";
+                weekday[1] = "Monday";
+                weekday[2] = "Tuesday";
+                weekday[3] = "Wednesday";
+                weekday[4] = "Thursday";
+                weekday[5] = "Friday";
+                weekday[6] = "Saturday";
+
+                let currentTime = new Date();
+                days = weekday[currentTime.getDay()];
+                day.innerText = days;
+            };
+            getCurrentDay();
+
+
+            ////////////////////date//////////////////////
+            const datetoday = () =>{
+            var d = new Date();
+            var n = d.getMonth();
+            
+            var d1 = new Date();
+            var n2 = d.getDate();
+
+            var d2 = new Date();
+            var n3 = d.getFullYear();
+            today_date.innerText = `${n2} | ${n} | ${n3}`;
+
+    };
+    datetoday();
+         
+
+       
+           
+
+</script>
+</body>
+</html>
